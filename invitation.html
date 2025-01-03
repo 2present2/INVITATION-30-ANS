@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Anniversaire</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap'); /* Typo médiévale */
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            text-align: center;
+            background: url('trounoir.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1, .enluminure {
+            font-family: 'UnifrakturMaguntia', cursive;
+            color: #ffcc00;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #39ff14; /* Vert fluo pour les liens */
+            text-decoration: underline; /* Souligné */
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-size: 1em;
+            font-style: italic;
+            color: #fff;
+        }
+
+        .spacer {
+            margin-top: 100px;
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            border: none;
+            margin-top: 20px;
+        }
+
+        /* Styles responsive pour les petits écrans */
+        @media (max-width: 768px) {
+            h1, .enluminure {
+                font-size: 2em;
+            }
+            p, a {
+                font-size: 1em;
+            }
+            .signature {
+                font-size: 0.9em;
+            }
+            iframe {
+                height: 300px;
+            }
+        }
+
+        /* Bouton de lecture chic avec animation Wizz */
+        .play-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ff33cc;
+            color: white;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            right: 30px;
+            bottom: 50%;
+            transform: translateY(50%);
+            animation: wizz 1.5s infinite;
+        }
+
+        .play-button:hover {
+            background-color: #ff00aa;
+        }
+
+        @keyframes wizz {
+            0%, 100% {
+                transform: translateY(50%) scale(1);
+            }
+            50% {
+                transform: translateY(50%) scale(1.2);
+            }
+        }
+
+        /* Animation du chiffre 30 */
+        .number-30 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 150px; /* Taille ajustée */
+            transform: rotate(0deg);
+            animation: moveAndRotate 6s linear infinite;
+        }
+
+        @keyframes moveAndRotate {
+            0% {
+                left: 0;
+                bottom: 0;
+                transform: rotate(0deg);
+            }
+            50% {
+                left: 50%;
+                bottom: 50%;
+                transform: rotate(180deg);
+            }
+            100% {
+                left: 100%;
+                bottom: 100%;
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Bouton confirmer avec fond vert fluo et animation wizz */
+        .confirm-button {
+            display: inline-block;
+            background-color: #39ff14; /* Vert fluo */
+            color: white; /* Texte blanc */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            animation: confirmWizz 1.5s infinite;
+        }
+
+        .confirm-button:hover {
+            background-color: #2fdc11;
+        }
+
+        @keyframes confirmWizz {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* GIF entre les sections */
+        .invitation-gif {
+            margin: 20px 0;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Musique en fond avec autoplay -->
+    <audio id="background-music" loop autoplay>
+        <source src="MrVictor.mp3" type="audio/mp3">
+        Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+
+    <div class="spacer"></div>
+    <h1>CARTON D’INVITATION DIGITAL</h1>
+    <p>Rejoins-moi boire cette nouvelle décennie qui s'envole.</p>
+    <p><strong>DATE :</strong> <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Anniversaire+Victor&dates=20250118T200000Z/20250118T220000Z&details=Viens+fêter+l'anniversaire+de+Victor+à+la+Chambre+Noire&location=Studio,+Chambre+Noire,+4+Bd+Jules+Ferry,+75011+Paris" target="_blank">18 JANVIER 2025</a></p>
+    <p><strong>LIEU :</strong> <a href="https://www.google.com/maps/place/Chambre+Noire+STUDIO/@48.8670074,2.3691792,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66de2da04b193:0x212f873bb4640f49!8m2!3d48.8670074!4d2.3691792!16s%2Fg%2F11bw619t44?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Studio, Chambre Noire, 4 Bd Jules Ferry, 75011 Paris</a></p>
+    <p><strong>HEURE :</strong> 20 HEURES</p>
+
+    <p>Clique sur ce bouton pour confirmer ta présence :</p>
+    <a class="confirm-button" href="confirmation.html" target="_blank">Confirmer ma présence</a>
+
+    <!-- GIF manquant -->
+    <img class="invitation-gif" src="EV9t.gif" alt="GIF invitation">
+
+    <h2 class="enluminure">CARTON D'INVITATION DIGITAL</h2>
+    
+    <!-- PNG avec le chiffre 30 -->
+    <img class="number-30" src="30th-birthday-clip-art-images-7.png" alt="Chiffre 30" />
+
+    <!-- Bouton de lecture/pause -->
+    <button class="play-button" id="playPauseButton" onclick="toggleMusic()">
+        ▶
+    </button>
+
+    <script>
+        const audio = document.getElementById('background-music');
+        const playPauseButton = document.getElementById('playPauseButton');
+
+        // Fonction pour jouer ou mettre en pause la musique
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                playPauseButton.textContent = '❚❚'; // Icône pause
+            } else {
+                audio.pause();
+                playPauseButton.textContent = '▶'; // Icône play
+            }
+        }
+    </script>
+</body>
+</html>
