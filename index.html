@@ -190,19 +190,22 @@
     <!-- Bouton de lecture -->
     <button class="play-button" onclick="toggleMusic()">▶</button>
 
-    <script>
-        const music = document.getElementById('background-music');
-        let isPlaying = true;
+ <script>
+    const music = document.getElementById('background-music');
+    const playButton = document.querySelector('.play-button');
+    let isPlaying = true;
 
-        function toggleMusic() {
-            if (isPlaying) {
-                music.pause();
-                isPlaying = false;
-            } else {
-                music.play();
-                isPlaying = true;
-            }
+    function toggleMusic() {
+        if (isPlaying) {
+            music.pause();
+            playButton.textContent = '▶'; // Mettre le bouton en mode "Lecture"
+            isPlaying = false;
+        } else {
+            music.play();
+            playButton.textContent = '❚❚'; // Mettre le bouton en mode "Pause"
+            isPlaying = true;
         }
-    </script>
-</body>
+    }
+</script>
+
 </html>
