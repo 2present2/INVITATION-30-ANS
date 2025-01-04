@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARTON D'INVITATION</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            text-align: center;
+            background: url('trounoir.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        h1, .enluminure {
+            font-family: 'UnifrakturMaguntia', cursive;
+            color: #ffcc00;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: #0fff95; /* Vert fluo intense */
+            text-shadow: 0 0 8px #0fff95, 0 0 15px #0fff95;
+            animation: glowPulse 2s infinite alternate;
+        }
+
+        @keyframes glowPulse {
+            0% {
+                text-shadow: 0 0 8px #0fff95, 0 0 15px #0fff95;
+            }
+            50% {
+                text-shadow: 0 0 15px #0fff95, 0 0 25px #0fff95;
+            }
+            100% {
+                text-shadow: 0 0 8px #0fff95, 0 0 15px #0fff95;
+            }
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-size: 1em;
+            font-style: italic;
+            color: #fff;
+        }
+
+        .spacer {
+            margin-top: 50px;
+        }
+
+        .confirmation-button {
+            background: #00ff00;
+            border: none;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px 20px;
+            cursor: pointer;
+            animation: wizz 1.5s infinite alternate;
+        }
+
+        .confirmation-button:hover {
+            background: #00cc00;
+        }
+
+        @keyframes wizz {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        .play-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ff1493;
+            color: white;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            right: 20px;
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+
+        .play-button:hover {
+            background-color: #ff69b4;
+        }
+
+        .number-30 {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            width: 100px;
+            height: auto;
+            transform: rotate(0deg);
+            animation: moveAndRotate 6s linear infinite;
+        }
+
+        @keyframes moveAndRotate {
+            0% {
+                left: 10px;
+                bottom: 10px;
+                transform: rotate(0deg);
+            }
+            50% {
+                left: 50%;
+                bottom: 50%;
+                transform: rotate(180deg);
+            }
+            100% {
+                left: 90%;
+                bottom: 90%;
+                transform: rotate(360deg);
+            }
+        }
+
+        img.gif-deco {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 10px;
+            }
+            h1, .enluminure {
+                font-size: 2.5em;
+            }
+            .play-button {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Musique en fond avec autoplay -->
+    <audio id="background-music" loop autoplay>
+        <source src="MrVictor.mp3" type="audio/mp3">
+        Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+
+    <div class="spacer"></div>
+    <h1>CARTON D’INVITATION DIGITAL</h1>
+    <p>Rejoins-moi pour cette mutation vers un nouveau cycle.</p>
+    <p><strong>DATE :</strong> <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Anniversaire+Victor&dates=20250118T200000Z/20250118T220000Z&details=Viens+fêter+l'anniversaire+de+Victor+à+la+Chambre+Noire&location=Studio,+Chambre+Noire,+4+Bd+Jules+Ferry,+75011+Paris" target="_blank"><span class="highlight">18 JANVIER 2025</span></a></p>
+    <p><strong>LIEU :</strong> <a href="https://www.google.com/maps/place/Chambre+Noire+STUDIO/@48.8670074,2.3691792,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66de2da04b193:0x212f873bb4640f49!8m2!3d48.8670074!4d2.3691792!16s%2Fg%2F11bw619t44?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank"><span class="highlight">Studio, Chambre Noire, 4 Bd Jules Ferry, 75011 Paris</span></a></p>
+    <p><strong>HEURE :</strong> 20 HEURES</p>
+
+    <p>Clique sur ce bouton pour confirmer ta présence :</p>
+    <button class="confirmation-button">Confirmer ma présence</button>
+
+    <!-- GIF entre bouton et enluminure -->
+    <img src="EV9t.gif" alt="Décoration GIF" class="gif-deco" />
+
+    <p class="signature">Bisous,<br>Victor</p>
+
+    <h2 class="enluminure">CARTON D'INVITATION DIGITAL</h2>
+    
+    <!-- PNG du chiffre 30 -->
+    <img class="number-30" src="30th-birthday-clip-art-images-7.png" alt="Chiffre 30" />
+
+    <!-- Bouton de lecture -->
+    <button class="play-button" onclick="toggleMusic()">▶</button>
+
+    <script>
+        const music = document.getElementById('background-music');
+        let isPlaying = true;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                isPlaying = false;
+            } else {
+                music.play();
+                isPlaying = true;
+            }
+        }
+    </script>
+</body>
+</html>
