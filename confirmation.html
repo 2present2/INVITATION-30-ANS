@@ -12,16 +12,21 @@
             color: #333;
             padding: 50px;
         }
+        .gif-container {
+            display: inline-block; /* Conteneur qui s'ajuste à la taille du GIF */
+            margin: 0; /* Suppression des marges autour */
+            padding: 0;
+        }
         iframe {
             width: 80%;
-            height: 500px;
+            height: auto; /* Laisse le GIF ajuster sa hauteur automatiquement */
             border: none;
-            margin: 0; /* Suppression des marges */
+            display: block; /* Évite des espaces blancs en mode inline */
         }
         .confirmation-message {
             font-size: 1.5em;
             color: #28a745;
-            margin: 5px 0; /* Réduction des marges haut/bas */
+            margin: 10px 0; /* Réduction supplémentaire des espaces */
         }
         .small-text {
             font-size: 0.9em;
@@ -41,8 +46,12 @@
     
     <p class="small-text">For any +1 ask me</p>
 
-    <iframe src="47q.gif" width="80%" height="500" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <!-- Conteneur pour le GIF -->
+    <div class="gif-container">
+        <iframe src="47q.gif" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
 
+    <!-- Lien vers le set SoundCloud -->
     <p class="confirmation-message"><span class="highlight-text">my ambient set for u <3 :</span> 
         <a href="https://soundcloud.com/pres3nt/just-the-beginning" target="_blank">Écouter sur SoundCloud</a>
     </p>
