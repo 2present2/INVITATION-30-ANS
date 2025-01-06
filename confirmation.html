@@ -24,7 +24,20 @@
             margin-top: 20px;
         }
         .red-text {
-            color: #8B0000; /* Rouge vin */
+            color: #0fff95; /* Vert fluo intense */
+            text-shadow: 0 0 8px #0fff95, 0 0 15px #0fff95;
+            animation: glowPulse 2s infinite alternate;
+        }
+        @keyframes glowPulse {
+            0% {
+                text-shadow: 0 0 8px #0fff95, 0 0 15px #0fff95;
+            }
+            50% {
+                text-shadow: 0 0 15px #0fff95, 0 0 25px #0fff95;
+            }
+            100% {
+                text-shadow: 0 0 8px #0fff95, 0 0 15px #0fff95;
+            }
         }
     </style>
 </head>
@@ -32,6 +45,11 @@
     <h1>T'as bien raison de venir, ça va être fun.</h1>
     <p class="confirmation-message"></p>
     <iframe src="47q.gif" width="80%" height="500" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+    <!-- Lien vers le set SoundCloud -->
+    <p class="confirmation-message"><span class="red-text">My ambient set for u :</span> 
+        <a href="https://soundcloud.com/pres3nt/just-the-beginning" target="_blank">Écouter sur SoundCloud</a>
+    </p>
 
     <p class="confirmation-message"><span class="red-text">I LIKE MAILS : </span><a href="mailto:victor.roger@outlook.com">victor.roger@outlook.com</a></p>
 </body>
