@@ -13,20 +13,20 @@
             padding: 50px;
         }
         .gif-container {
-            display: inline-block; /* Conteneur qui s'ajuste à la taille du GIF */
-            margin: 0; /* Suppression des marges autour */
-            padding: 0;
+            width: 100%; /* Le conteneur occupe toute la largeur disponible */
+            max-width: 500px; /* Taille maximale sur des écrans plus grands */
+            margin: 0 auto; /* Centrage horizontal */
         }
         iframe {
-            width: 80%;
-            height: auto; /* Laisse le GIF ajuster sa hauteur automatiquement */
+            width: 100%; /* S'ajuste à la largeur du conteneur */
+            height: auto; /* Maintient le ratio du GIF */
             border: none;
-            display: block; /* Évite des espaces blancs en mode inline */
+            display: block; /* Supprime tout espace résiduel */
         }
         .confirmation-message {
             font-size: 1.5em;
             color: #28a745;
-            margin: 10px 0; /* Réduction supplémentaire des espaces */
+            margin: 20px 0; /* Ajout d'espacement entre les blocs */
         }
         .small-text {
             font-size: 0.9em;
@@ -48,7 +48,7 @@
 
     <!-- Conteneur pour le GIF -->
     <div class="gif-container">
-        <iframe src="47q.gif" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <iframe src="47q.gif" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
     </div>
 
     <!-- Lien vers le set SoundCloud -->
